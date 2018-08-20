@@ -1,6 +1,22 @@
 <template>
     <div class="container">
+
         <h1>Latest Micro-Posts</h1>
+        <div class="users">
+          <button v-if="!profile" v-on:click="signIn">
+            Sign In
+          </button>
+          <button v-if="profile" v-on:click="signOut">
+            Sign Out
+          </button>
+          <p v-if="profile">
+            Hello there, {{ profile.name }}. Why don't you
+            <router-link to="{name: 'Share Thoughts' }">
+              share your thoughts?
+            </router-link>
+          </p>
+        </div>
+
         <p class="error" v-if="error">{{ error }}</p>
         <div class="micro-posts-container">
           <div class="micro-post"
@@ -19,25 +35,39 @@
 </template>
 
 <script>
-import MicroPostService from '../MicroPostsService'
-
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      microPosts: [],
-      error: ''
+    import * as Auth0 from 'auth0-web'
+    import MicroPostService from '../MicroPostsService'
+    
+    export default {
+      name: 'HelloWorld',
+      data () {
+        return {
+          microPosts: [],
+          error: '',
+          profile: null
+        }
+      },
+      async created () {
+        try {
+          this.microPosts = await MicroPostService.getMicroPosts()
+          Auth0.subscribe(() => {
+            this.profile = Auth0.getProfile()
+          })
+        } catch (error) {
+          this.error = error.message
+        }
+      },
+      methods: {
+        signIn: Auth0.signIn,
+        signOut () {
+          Auth0.signOut({
+            clientID: 'ntQlRZis0vCPqbYsg3ijpkHlZWcBC3fJ',
+            returnTo: 'http://localhost:8080/'
+          })
+        }
+      }
     }
-  },
-  async created () {
-    try {
-      this.microPosts = await MicroPostService.getMicroPosts()
-    } catch (error) {
-      this.error = error.message
-    }
-  }
-}
-</script>
+    </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
