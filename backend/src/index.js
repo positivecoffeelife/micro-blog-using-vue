@@ -15,4 +15,6 @@ app.use(morgan('combined')); //middleware
 app.use('/micro-posts', routes);
 
 //listen for changes, live updating app
-app.listen(8081, () => console.log('listening on port 8081'));
+app.listen(8081, () => {
+    console.log('listening on port 8081')
+});
