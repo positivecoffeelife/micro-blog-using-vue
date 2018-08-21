@@ -16,14 +16,24 @@ Posting and reading of posts possible.
 Vue.js, Auth0, Express, and MongoDB (within a Docker container)
 
 ## Dependencies:
-To be updated... (however, if you tried to fire up the application as-is, I'm sure it would complain about them basically one at a time.
+To be updated... (however, if you tried to fire up the application as-is, I'm sure it would complain about them basically one at a time. Versions indicated at time of build.
 - Express
 - MongoDB
 - Vue
 - Auth0
 - Webpack
-- Axios
-- Docker
+- Axios 
+- Docker (Version 18.06.0-ce-mac70 (26399))
+- Cors
+- Helmet
+- bodyParser
+
+## Installs
+If you get an error running a ``-g`` install, then simply prepend ``sudo `` to your command or run as Administrator. 
+- ``npm install -g vue-cli``
+- ``vue init webpack client``
+- ``npm install -g express body-parser cors mongodb morgan helmet``
+- ``npm install -g axios auth0-web@1.7.0 express-jwt jwks-rsa auth0``
 
 ## Information
 - ``http://localhost:8080/`` this is where the blog post page will be active
