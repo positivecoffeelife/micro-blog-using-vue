@@ -35,7 +35,7 @@ To be updated... (however, if you tried to fire up the application as-is, I'm su
 - node (8.11.3)
 
 ## Installs
-It is assumed that you have NodeJS and NPM installed.. if you don't, please do.
+It is assumed that you have NodeJS, Webpack, and NPM installed.. if you don't, please do.
 If you get an error running a ``-g`` install, then simply prepend ``sudo `` to your command or run as Administrator. 
 - ``npm install -g vue-cli``
 - ``vue init webpack client``
