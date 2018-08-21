@@ -37,7 +37,7 @@ To do so:
 - Issue ``lsof -i tcp:8081``
 - Get the PID
 - Issue ``kill -15 enteryourPIDnumberhere``
-- We use "-15" instead of "-9" because we want to give the process thread a chance to clean up instead of leave any open threads.
+- We use "-15" instead of "-9" because we want to give the process thread a chance to clean up instead of potentially leaving any open threads.
 
 # Thanks for stopping by and checking it out!
 I hope this helps you!
