@@ -32,11 +32,12 @@ To be updated... (however, if you tried to fire up the application as-is, I'm su
 ## Troubleshooting
 Sometimes the local session on port 8081 gets stuck open.  To correct this, we want to kill the process.
 To do so:
-- open up a command line prompt, navigating to the ``backend`` directory
-- issue ``lsof -i tcp:8081``
-- get the PID
-- issue ``kill -15 enteryourPIDnumberhere``
-- we use "-15" instead of "-9" because we want to give the process thread a chance to clean up instead of leave any open threads.
+- Open up a command line prompt, navigating to the ``backend`` directory
+- Use ``Ctrl + C`` to stop anything currently running or port listening.
+- Issue ``lsof -i tcp:8081``
+- Get the PID
+- Issue ``kill -15 enteryourPIDnumberhere``
+- We use "-15" instead of "-9" because we want to give the process thread a chance to clean up instead of leave any open threads.
 
 # Thanks for stopping by and checking it out!
 I hope this helps you!
