@@ -87,8 +87,9 @@ p.error {
 
 div.micro-post {
   position: relative;
-  border: 1px solid #5bd658;
-  background-color: #bcffb8;
+  border: 1px solid #7e8d7e;
+  background-color: #581a1a;
+  color:#fff;
   padding: 10px;
   margin-bottom: 15px;
 }
@@ -98,7 +99,7 @@ div.created-at {
   top: 0;
   left: 0;
   padding: 5px 15px 5px 15px;
-  background-color: darkgreen;
+  background-color: rgb(209, 28, 28);
   color: white;
   font-size: 13px;
 }
