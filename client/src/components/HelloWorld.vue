@@ -18,6 +18,8 @@
         </div>
 
         <p class="error" v-if="error">{{ error }}</p>
+
+
         <div class="micro-posts-container">
           <div class="micro-post"
                v-for="(microPost, index) in microPosts"
@@ -25,10 +27,10 @@
                v-bind:index="index"
                v-bind:key="microPost.id">
             <div class="created-at">
-              {{ `${microPost.createdAt.getDate()}/${microPost.createdAt.getMonth() + 1}/${microPost.createdAt.getFullYear()}` }}
+              {{ `${microPost.createdAt.getMonth() + 1}/${microPost.createdAt.getDate()}/${microPost.createdAt.getFullYear()}` }}
             </div>
             <p class="text">{{ microPost.text }}</p>
-            <p class="author">- Unknown</p>
+            <p class="author">- {{ microPost.author ? microPost.author.name : 'Unknown' }}</p>
           </div>
         </div>
       </div>
