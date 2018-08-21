@@ -4,7 +4,7 @@
 
 ## Purpose
 To have a working example of a blog/comment posting section, trying out Vue.js with some authentication.
-These techniques can be applied to CRUD applications. Forthcoming updates to this README will happen, as well, maybe with package install commands, etc.
+These techniques can be applied to CRUD applications. Forthcoming updates to this README will happen, as well, maybe with package install commands, etc. Inspired by a few resources online to explore Vue.js/Auth0.
 
 ## Un-Authenticated Users:
 Posts are Read-only.
