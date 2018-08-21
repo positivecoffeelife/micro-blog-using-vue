@@ -20,7 +20,7 @@ To be updated... (however, if you tried to fire up the application as-is, I'm su
 - express (4.16.3)
 - morgan (1.9.0)
 - mongodb (3.1.3)
-- Vue
+- Vue (2.9.6)
 - Auth0 (2.12.0)
 - Webpack
 - Axios (0.18.0)
