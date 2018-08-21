@@ -22,7 +22,7 @@ To be updated... (however, if you tried to fire up the application as-is, I'm su
 - mongodb (3.1.3)
 - Vue (2.9.6)
 - Auth0 (2.12.0)
-- Webpack
+- Webpack (4.16.5)
 - Axios (0.18.0)
 - Docker (Version 18.06.0-ce-mac70 (26399))
 - Cors (2.8.4)
