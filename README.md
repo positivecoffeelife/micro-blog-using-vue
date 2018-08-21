@@ -17,18 +17,25 @@ Vue.js, Auth0, Express, and MongoDB (within a Docker container)
 
 ## Dependencies:
 To be updated... (however, if you tried to fire up the application as-is, I'm sure it would complain about them basically one at a time. Versions indicated at time of build.
-- Express
-- MongoDB
-- Vue
-- Auth0
+- express (4.16.3)
+- morgan (1.9.0)
+- mongodb (3.1.3)
+- Vue (2.9.6)
+- Auth0 (2.12.0)
 - Webpack
-- Axios 
+- Axios (0.18.0)
 - Docker (Version 18.06.0-ce-mac70 (26399))
-- Cors
-- Helmet
-- bodyParser
+- Cors (2.8.4)
+- Helmet (3.13.0)
+- body-parser (1.18.3)
+- express-jwt (5.3.1)
+- jwks-rsa (1.3.0)
+- auth0-web (1.7.0)
+- npm (6.3.0)
+- node (8.11.3)
 
 ## Installs
+It is assumed that you have NodeJS, Webpack, and NPM installed.. if you don't, please do.
 If you get an error running a ``-g`` install, then simply prepend ``sudo `` to your command or run as Administrator. 
 - ``npm install -g vue-cli``
 - ``vue init webpack client``
